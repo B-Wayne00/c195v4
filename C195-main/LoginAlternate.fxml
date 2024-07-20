@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="718.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="30.0" layoutY="25.0" text="Appointment Scheduling System">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <RadioButton layoutX="799.0" layoutY="350.0" mnemonicParsing="false" text="Week" />
+      <RadioButton layoutX="671.0" layoutY="350.0" mnemonicParsing="false" text="All" />
+      <RadioButton layoutX="726.0" layoutY="350.0" mnemonicParsing="false" text="Month" />
+      <TableView layoutX="30.0" layoutY="102.0" prefHeight="242.0" prefWidth="820.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="C1" />
+          <TableColumn prefWidth="75.0" text="C2" />
+        </columns>
+      </TableView>
+      <TableView layoutX="30.0" layoutY="429.0" prefHeight="242.0" prefWidth="820.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="C1" />
+          <TableColumn prefWidth="75.0" text="C2" />
+        </columns>
+      </TableView>
+      <Button fx:id="ToAddAppointmentButton" layoutX="30.0" layoutY="349.0" mnemonicParsing="false" onAction="#toAddAppointment" text="Add" />
+      <Label layoutX="30.0" layoutY="74.0" text="Appointments" />
+      <Button fx:id="ToModifyAppointmentButton" layoutX="72.0" layoutY="349.0" mnemonicParsing="false" onAction="#toModifyAppointment" text="Modify" />
+      <Button fx:id="DeleteAppointmentButton" layoutX="129.0" layoutY="349.0" mnemonicParsing="false" onAction="#deleteAppointment" text="Delete" />
+      <Button fx:id="ToAddCustomerButton" layoutX="30.0" layoutY="677.0" mnemonicParsing="false" onAction="#toAddCustomer" text="Add" />
+      <Button fx:id="ToModifyCustomerButton" layoutX="72.0" layoutY="677.0" mnemonicParsing="false" onAction="#toModifyCustomer" text="Modify" />
+      <Button fx:id="DeleteCustomerButton" layoutX="129.0" layoutY="677.0" mnemonicParsing="false" onAction="#toDeleteCustomer" text="Delete" />
+      <Button fx:id="ReportButton" layoutX="688.0" layoutY="34.0" mnemonicParsing="false" onAction="#toReports" prefHeight="55.0" prefWidth="76.0" text="Reports" />
+      <Button fx:id="LogOutButton" layoutX="774.0" layoutY="34.0" mnemonicParsing="false" onAction="#logOut" prefHeight="55.0" prefWidth="76.0" text="Log Out" />
+      <Label layoutX="30.0" layoutY="405.0" text="Customers" />
+      <Separator layoutX="17.0" layoutY="393.0" prefHeight="4.0" prefWidth="859.0" />
+   </children>
+</AnchorPane>

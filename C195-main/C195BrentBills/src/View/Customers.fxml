@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="707.0" prefWidth="1207.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CustomerController">
+   <children>
+      <TableView fx:id="CustomerTable" layoutX="19.0" layoutY="93.0" prefHeight="558.0" prefWidth="1158.0">
+        <columns>
+          <TableColumn fx:id="CustIDCol" prefWidth="79.33332824707031" text="Customer ID" />
+          <TableColumn fx:id="CustNameCol" prefWidth="126.33332824707031" text="Customer Name" />
+            <TableColumn fx:id="CustAddressCol" prefWidth="254.33334350585938" text="Address" />
+            <TableColumn fx:id="CustPostalCol" prefWidth="87.66665649414062" text="Postal Code" />
+            <TableColumn fx:id="CustPhoneCol" prefWidth="76.00003051757812" text="Phone" />
+            <TableColumn fx:id="CustCreatedCol" prefWidth="108.33334350585938" text="Create Date" />
+            <TableColumn fx:id="CustCreatedByCol" prefWidth="97.66668701171875" text="Created By" />
+            <TableColumn fx:id="CustUpdatedCol" prefWidth="93.66668701171875" text="Last Update" />
+            <TableColumn fx:id="CustUpdatedByCol" prefWidth="119.33331298828125" text="Last Updated By" />
+            <TableColumn fx:id="CustDivisionIDCol" prefWidth="125.666748046875" text="Division ID" />
+        </columns>
+      </TableView>
+      <Label layoutX="8.0" layoutY="16.0" prefHeight="34.0" prefWidth="376.0" text="Customers">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <Button fx:id="ToAddCustomerButton" layoutX="19.0" layoutY="650.0" mnemonicParsing="false" onAction="#toAddCustomer" prefHeight="32.0" prefWidth="386.0" text="Add" />
+      <Button fx:id="ToModifyCustomerButton" layoutX="405.0" layoutY="650.0" mnemonicParsing="false" onAction="#toModifyCustomer" prefHeight="32.0" prefWidth="386.0" text="Modify" />
+      <Button fx:id="DeleteCustomerButton" layoutX="791.0" layoutY="650.0" mnemonicParsing="false" onAction="#deleteCustomer" prefHeight="32.0" prefWidth="386.0" text="Delete" />
+      <Button fx:id="CustToMainScreenButton" layoutX="1049.0" layoutY="16.0" mnemonicParsing="false" onAction="#toMainScreen" prefHeight="57.0" prefWidth="128.0" text="Main Screen" />
+   </children>
+</AnchorPane>

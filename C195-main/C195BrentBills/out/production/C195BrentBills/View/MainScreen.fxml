@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="714.0" prefWidth="1197.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MainScreenController">
+   <children>
+      <Button fx:id="LogOutButton" layoutX="1049.0" layoutY="18.0" mnemonicParsing="false" onAction="#logOut" prefHeight="57.0" prefWidth="128.0" text="Log Out" />
+      <TableView fx:id="AppointmentTable" layoutX="19.0" layoutY="93.0" prefHeight="558.0" prefWidth="1158.0">
+        <columns>
+          <TableColumn fx:id="AppIDCol" prefWidth="105.33333587646484" text="Appointment ID" />
+          <TableColumn fx:id="AppTitleCol" prefWidth="45.666664123535156" text="Title" />
+            <TableColumn fx:id="AppDescCol" prefWidth="109.66667175292969" text="Description" />
+            <TableColumn fx:id="AppLocationCol" prefWidth="96.33332824707031" text="Location" />
+            <TableColumn fx:id="AppContactCol" prefWidth="118.0" text="Contact" />
+            <TableColumn fx:id="AppTypeCol" prefWidth="138.33331298828125" text="Type" />
+            <TableColumn fx:id="AppStartCol" prefWidth="152.66665649414062" text="Start" />
+            <TableColumn fx:id="AppEndCol" prefWidth="143.33331298828125" text="End" />
+            <TableColumn fx:id="AppCustIDCol" prefWidth="107.33331298828125" text="Customer ID" />
+            <TableColumn fx:id="AppUserIDCol" prefWidth="142.33331298828125" text="User ID" />
+        </columns>
+      </TableView>
+      <Label layoutX="15.0" layoutY="12.0" prefHeight="39.0" prefWidth="425.0" text="Appointment Scheduling System">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <Button fx:id="ToCustomersButton" layoutX="752.0" layoutY="18.0" mnemonicParsing="false" onAction="#toCustomers" prefHeight="57.0" prefWidth="128.0" text="Customers" />
+      <Button fx:id="ToReportsButton" layoutX="903.0" layoutY="18.0" mnemonicParsing="false" onAction="#toReports" prefHeight="57.0" prefWidth="128.0" text="Reports" />
+      <Button fx:id="ToAddAppointmentButton" layoutX="19.0" layoutY="651.0" mnemonicParsing="false" onAction="#toAddAppointment" prefHeight="32.0" prefWidth="386.0" text="Add" />
+      <Button fx:id="ToModifyAppointmentButton" layoutX="405.0" layoutY="651.0" mnemonicParsing="false" onAction="#toModifyAppointment" prefHeight="32.0" prefWidth="386.0" text="Modify" />
+      <Button fx:id="DeleteAppointmentButton" layoutX="791.0" layoutY="651.0" mnemonicParsing="false" onAction="#deleteAppointment" prefHeight="32.0" prefWidth="386.0" text="Delete" />
+      <RadioButton fx:id="MonthRadioButton" layoutX="19.0" layoutY="65.0" mnemonicParsing="false" onAction="#appointmentByMonth" text="Month">
+         <toggleGroup>
+            <ToggleGroup fx:id="AppointmentFilterButtons" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="WeekRadioButton" layoutX="103.0" layoutY="65.0" mnemonicParsing="false" onAction="#appointmentByWeek" text="Week" toggleGroup="$AppointmentFilterButtons" />
+      <RadioButton fx:id="AllRadioButton" layoutX="185.0" layoutY="65.0" mnemonicParsing="false" onAction="#appointmentByAll" selected="true" text="All" toggleGroup="$AppointmentFilterButtons" />
+   </children>
+</AnchorPane>
